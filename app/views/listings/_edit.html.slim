@@ -1,0 +1,50 @@
+div.edit_form
+  = form_for [current_user, @listing] do |f|
+    div.field
+      = f.label :name
+      br
+      = f.text_field :name
+    div.field
+      = f.label :description
+      br
+      = f.text_field :description
+    div.field
+      = f.label :place_type
+      br
+      = f.text_field :place_type
+    div.field
+      = f.label :room_number
+      br
+      = f.number_field :room_number
+    div.field
+      = f.label :bed_number
+      br
+      = f.number_field :bed_number
+    div.field
+      = f.label :guest_number
+      br
+      = f.number_field :guest_number
+    div.field
+      = f.label :country
+      br
+      = f.text_field :country
+    div.field
+      = f.label :state
+      br
+      = f.text_field :state
+    div.field
+      = f.label :city
+      br
+      = f.text_field :city
+    div.field
+      = f.label :address
+      br
+      = f.text_field :address
+    div.field
+      = f.label :price
+      br
+      = f.number_field :price
+    div.field
+      = f.hidden_field :user_id, value: current_user.id
+    div.actions
+      = f.submit
