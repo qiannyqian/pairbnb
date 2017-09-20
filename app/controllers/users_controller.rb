@@ -16,7 +16,7 @@ class UsersController < Clearance::UsersController
 
   def update
     @user = User.find(params[:id])
-    byebug
+
     if @user.update(user_params)
       redirect_to '/listings'
     else
