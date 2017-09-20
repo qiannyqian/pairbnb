@@ -5,9 +5,11 @@ div.edit_form
     .text-field
       = f.label :first_name
       = f.text_field :first_name
+    br
     .text-field
       = f.label :last_name
       = f.text_field :last_name
+    br
     .text-field
       = f.label :email
       = f.text_field :email, type: 'email'
@@ -19,14 +21,18 @@ div.edit_form
     .text-field
       = f.label :gender
       = f.text_field :gender
+    br
     .text-field
       = f.label :phone
       = f.text_field :phone
+    br
     .text-field
       = f.label :country
       = f.text_field :country
+    br
     .text_field
       = f.label :birthdate
       = f.date_field :birthdate
+    br
     .submit-field
       = f.submit

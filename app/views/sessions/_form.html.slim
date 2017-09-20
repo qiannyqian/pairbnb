@@ -1,0 +1,23 @@
+= form_for :session, url: session_path do |form|
+  div.signin_form
+    .text-field
+      = form.label :email
+      = form.text_field :email, type: 'email'
+    .password-field
+      = form.label :password
+      = form.password_field :password
+    br  
+    .submit-field
+      = form.submit
+    br
+      = link_to("/auth/facebook") do
+        = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
+      end
+
+  div.links
+    .other-links
+      br
+      - if Clearance.configuration.allow_sign_up?
+        = link_to t(".sign_up"), sign_up_path
+      br
+      = link_to t(".forgot_password"), new_password_path

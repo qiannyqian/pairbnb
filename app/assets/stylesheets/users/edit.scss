@@ -1,0 +1,26 @@
+.title {
+  font-size: 1em;
+  text-align: center;
+}
+
+.edit_profile {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.edit_form .text_field {
+  padding: 10px;
+}
+
+.profile {
+  flex: 1 auto;
+}
+
+.links {
+  flex: 1 auto;
+  font-size: 2em;
+  text-align: left;
+}
