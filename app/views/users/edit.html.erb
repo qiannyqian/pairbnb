@@ -1,7 +1,9 @@
-<h1>Edit page</h1>
+<h1>Edit Profile</h1>
+
+<%= render partial: '/users/profile' %>
+
+<%= link_to 'Your Listings', user_listings_path(current_user) %>
+
+<%= link_to 'Create New Listing', new_user_listing_path(current_user) %>
 
 <%= link_to 'Home', root_path %>
-
-<%= link_to 'Index of listings', user_listings_path %>
-
-<%= link_to 'Create new listing', new_user_listing_path %>
