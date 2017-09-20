@@ -35,6 +35,7 @@ gem 'slim'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

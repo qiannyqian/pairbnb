@@ -19,5 +19,7 @@ table
           = link_to 'Destroy', user_listing_path(@user.id, listing.id), method: :delete, data: { confirm: 'Are you sure?' }
 br
 
+= paginate @listings 
+
 h6
   = link_to 'New user listing', new_user_listing_path(@user.id)

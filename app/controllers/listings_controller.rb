@@ -5,13 +5,15 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    # @listings = Listing.all
     @user = current_user
+    @listings = Listing.order('created_at DESC').page(params[:page]).per(15)
   end
 
   def all
-    @listings = Listing.all
+    # @listings = Listing.all
     @user = current_user
+    @listings = Listing.order('created_at DESC').page(params[:page]).per(15)
   end
 
   # GET /listings/1
