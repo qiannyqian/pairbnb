@@ -1,0 +1,32 @@
+div.edit_form
+  = form_for @user do |f|
+    br
+    h4 User Account
+    .text-field
+      = f.label :first_name
+      = f.text_field :first_name
+    .text-field
+      = f.label :last_name
+      = f.text_field :last_name
+    .text-field
+      = f.label :email
+      = f.text_field :email, type: 'email'
+    / .password-field
+    /   = f.label :password
+    /   = f.password_field :password
+    br
+    h4 Biodata Information
+    .text-field
+      = f.label :gender
+      = f.text_field :gender
+    .text-field
+      = f.label :phone
+      = f.text_field :phone
+    .text-field
+      = f.label :country
+      = f.text_field :country
+    .text_field
+      = f.label :birthdate
+      = f.date_field :birthdate
+    .submit-field
+      = f.submit
