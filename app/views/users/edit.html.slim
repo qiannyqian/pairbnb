@@ -1,0 +1,17 @@
+div.title
+  h1
+    | Edit Profile
+
+
+div.edit_profile
+  div.profile
+    = render partial: '/users/profile'
+
+  div.links
+    = link_to 'Your Listings', user_listings_path(current_user)
+    br
+    br
+    = link_to 'Create New Listing', new_user_listing_path(current_user)
+    br
+    br
+    = link_to 'Home', root_path
