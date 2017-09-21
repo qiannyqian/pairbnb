@@ -8,21 +8,26 @@ body {
   padding: 50px;
   background-color: salmon;
   color: white;
+  font-size: 2em;
 }
 
 .account {
   margin: 0 auto;
+  margin-top: 40px;
   text-align: center;
-  padding: 150px;
+  width: 300px;
+  padding: 50px;
   font-size: 1em;
-}
-
-.account .fb_login {
-  width: 150px;
-}
-
-.listings {
   background-color: white;
+}
+
+.account-links {
   padding: 20px;
+  text-align: center;
+}
+
+.fb-login {
+  margin: 0 auto;
+  width: 150px;
   text-align: center;
 }

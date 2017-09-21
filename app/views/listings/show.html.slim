@@ -1,57 +1,45 @@
 p#notice
   = notice
 
-h3
-  = @listing.name
-br
+div.listing-top
+  div.listing-header
+    = @listing.name
+  br
+  div.listing-desc
+    = @listing.description
 
-h5
-  = @listing.description
-br
+div.listing-bottom
+  div.listing-details
+    h4 Place type
+    = @listing.place_type
+    h4 Number of rooms
+    = @listing.room_number
+    h4 Number of beds
+    = @listing.bed_number
+    h4 Number of guests
+    = @listing.guest_number
+    h4 Address
+    = @listing.address
+    br
+    = @listing.city
+    br
+    = @listing.state
+    br
+    = @listing.country
+    br
 
-p
-  | Place type
-  br
-  = @listing.place_type
-  br
+  div.listing-price
+    h3
+      | Price Per Night
+      br
+      = @listing.price
+      br
+      | Verified Property:
+      br
+      = @listing.verified
 
-  | Number of rooms
-  br
-  = @listing.room_number
-  br
-
-  | Number of beds
-  br
-  = @listing.bed_number
-  br
-
-  | Number of guests
-  br
-  = @listing.guest_number
-  br
-
-  | Address
-  br
-  = @listing.address
-  br
-  = @listing.city
-  br
-  = @listing.state
-  br
-  = @listing.country
-  br
-
-h4
-  | Price Per Night
-  br
-  = @listing.price
-  br
-  | Verified Property:
-  br
-  = @listing.verified
-
-- if @user.moderator? || @user.superadmin?
-  = button_to 'Verify Listing', verify_path(@listing)
+    - if @user.moderator? || @user.superadmin?
+      = button_to 'Verify Listing', verify_path(@listing)
 
 h6
   = link_to 'Back', listings_path
