@@ -1,25 +1,23 @@
 p#notice
   = notice
 
-h1 Listings
+div.listing-title
+  h1 Listings
 
-table
-  thead
-    tr
-  tbody
-    - @listings.each do |listing|
-      tr
-        td
-          = listing.name
-        td
-          = link_to 'Show', user_listing_path(@user.id, listing.id), method: :get
-        td
-          = link_to 'Edit', edit_user_listing_path(@user.id, listing.id), method: :get
-        td
-          = link_to 'Destroy', user_listing_path(@user.id, listing.id), method: :delete, data: { confirm: 'Are you sure?' }
-br
+div.listing-container
+  - @listings.each do |listing|
+    div.listing-card
+      div.listing-name
+        = listing.name
+      br
+      div.listing-details
+        = listing.country
+        br
+        = listing.city
+      div.listing-links
+        = link_to 'Show', user_listing_path(@user.id, listing.id), method: :get
+        = link_to 'Edit', edit_user_listing_path(@user.id, listing.id), method: :get
+        = link_to 'Destroy', user_listing_path(@user.id, listing.id), method: :delete, data: { confirm: 'Are you sure?' }
 
-= paginate @listings 
-
-h6
-  = link_to 'New user listing', new_user_listing_path(@user.id)
+div.pagination
+  = paginate @listings
