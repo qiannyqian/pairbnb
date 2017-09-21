@@ -45,9 +45,6 @@ div.edit_form
       br
       = f.number_field :price
     div.field
-      = f.label :verified
-      = f.check_box :verified
-    div.field
       = f.hidden_field :user_id, value: current_user.id
     div.actions
       = f.submit
