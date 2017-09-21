@@ -48,6 +48,9 @@ div.create_form
       br
       = f.number_field :price
     div.field
+      = f.label :photos
+      = f.file_field :photos, multiple: true
+    div.field
       = f.hidden_field :user_id, value: current_user.id
     div.actions
       = f.submit
