@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # get "/users/edit" => "users#edit"
 
   get "/listings" => "listings#all"
+  post "/verify/:id" => "listings#verify", as: "verify"
 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
