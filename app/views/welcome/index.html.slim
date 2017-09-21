@@ -3,17 +3,16 @@ div.hero-header
     | PairBnB
 
 div.account
-  = link_to("/sign_up") do
-    h4 Sign Up With Email
-  end
-
-  = link_to("/sign_in") do
-    h4 Sign In With Email
-  end
-
-  = link_to("/auth/facebook") do
-    = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
-  end
+  div.account-links
+    = link_to "Sign up with email", sign_up_path
+    br
+    br
+    = link_to "Sign in with email", sign_in_path
+    br
+  div.fb-login
+    = link_to("/auth/facebook") do
+      = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
+    end
 
 / div.listings
 /   = link_to("/listings") do
