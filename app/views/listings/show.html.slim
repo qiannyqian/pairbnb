@@ -45,6 +45,13 @@ h4
   | Price Per Night
   br
   = @listing.price
+  br
+  | Verified Property:
+  br
+  = @listing.verified
+
+- if @user.moderator? || @user.superadmin?
+  = button_to 'Verify Listing', verify_path(@listing)
 
 h6
   = link_to 'Back', listings_path
