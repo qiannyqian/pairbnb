@@ -44,9 +44,14 @@ div.edit_form
       = f.label :price
       br
       = f.number_field :price
+    / div.field
+    /   = f.label :photos
+    /   = f.file_field :photos, multiple: true
     div.field
       = f.label :photos
-      = f.file_field :photos, multiple: true
+      = f.fields_for :photos do |photo_fields|
+        / = image_tag photo_fields.object.image.url
+        = photo_fields.file_field :image
     div.field
       = f.hidden_field :user_id, value: current_user.id
     div.actions

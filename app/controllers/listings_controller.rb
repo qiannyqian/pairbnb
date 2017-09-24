@@ -40,6 +40,7 @@ class ListingsController < ApplicationController
   # GET /listings/1/edit
   def edit
     @listing = Listing.find(params[:id])
+    # 5.times { @listing.photos.build }
   end
 
   # POST /listings
@@ -102,7 +103,11 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:user_id, :name, :place_type, :room_number, :bed_number, :guest_number, :country, :state, :city, :address, :price, :description, :verified, photos: [])
+      params.require(:listing).permit(:user_id, :name, :place_type, :room_number, :bed_number, :guest_number, :country, :state, :city, :address, :price, :description, :verified, photos_attributes: [
+        :id,
+        :image,
+        :_destroy
+        ])
     end
 
 end
