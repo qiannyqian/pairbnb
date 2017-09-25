@@ -15,12 +15,11 @@ Rails.application.routes.draw do
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
   get "/sign_up" => "clearance/users#new", as: "sign_up"
 
-  # get "/users/edit" => "users#edit"
-
   get "/listings" => "listings#all"
   post "/verify/:id" => "listings#verify", as: "verify"
 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post "/listings/:id/delete_photos/:photo_id" => "listings#destroy_image", as: "delete_photos"
+
 end
