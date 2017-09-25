@@ -8,6 +8,13 @@ div.listing-top
   div.listing-desc
     = @listing.description
 
+div.images
+  = form_for [current_user, @listing] do |f|
+    = f.label :photos
+    - if @listing.photos != nil
+      - @listing.photos.each_with_index do |image, index|
+        = image_tag(image.url)
+
 div.listing-bottom
   div.listing-details
     h4 Place type
@@ -26,7 +33,6 @@ div.listing-bottom
     = @listing.state
     br
     = @listing.country
-    br
 
   div.listing-price
     h3

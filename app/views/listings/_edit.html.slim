@@ -44,14 +44,16 @@ div.edit_form
       = f.label :price
       br
       = f.number_field :price
-    / div.field
-    /   = f.label :photos
-    /   = f.file_field :photos, multiple: true
     div.field
       = f.label :photos
-      = f.fields_for :photos do |photo_fields|
-        / = image_tag photo_fields.object.image.url
-        = photo_fields.file_field :image
+      = f.file_field :photos, multiple: true
+      br
+    div.field
+      - if @listing.photos != nil
+        - @listing.photos.each_with_index do |image, index|
+          = image_tag(image.url)
+          br
+          = link_to "Delete", delete_photos_path(@listing.id, index), method: :post
     div.field
       = f.hidden_field :user_id, value: current_user.id
     div.actions
