@@ -1,5 +1,6 @@
 body {
   background-color: #efefef;
+  margin: 0;
 }
 
 .hero-header {
@@ -11,6 +12,12 @@ body {
   font-size: 2em;
 }
 
+.body-container {
+  height: 100vh;
+  background-image: url('https://unsplash.it/1500/800/?random');
+  background-size: cover;
+}
+
 .account {
   margin: 0 auto;
   margin-top: 40px;
@@ -19,6 +26,7 @@ body {
   padding: 50px;
   font-size: 1em;
   background-color: white;
+  border-radius: 10px;
 }
 
 .account-links {

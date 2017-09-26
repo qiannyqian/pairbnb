@@ -1,6 +1,10 @@
 .title {
   font-size: 1em;
-  text-align: center;
+  text-align: left;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  background-color: #ffea30;
 }
 
 .edit_profile {
@@ -23,4 +27,11 @@
   flex: 1 auto;
   font-size: 2em;
   text-align: left;
+  background-color: white;
+  width: 100px;
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 0px;
 }
