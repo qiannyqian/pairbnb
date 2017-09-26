@@ -1,0 +1,17 @@
+h1 testing
+
+h1 Index of Reservations
+
+div.reservations-container
+  - @reservations.each do |reservation|
+    h4
+      = reservation.listing.name
+    p
+      | Booking from:
+      = reservation.start_date
+    p
+      | Until:
+      = reservation.end_date
+    p
+      | Cost per night:
+      = reservation.listing.price
