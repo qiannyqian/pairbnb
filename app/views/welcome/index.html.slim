@@ -1,19 +1,23 @@
 div.body-container
   div.hero-header
-    h1
+    h1.header-title
       | PairBnB
-  div.account
-    div.account-links
-      = link_to "Sign up with email", sign_up_path
-      br
-      br
-      = link_to "Sign in with email", sign_in_path
-      br
-    div.fb-login
-      = link_to("/auth/facebook") do
-        = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
-      end
-    div.listings
-      = link_to("/listings") do
-        h4 Listings
-      end
+    h3
+      | Find your next holiday home here.
+    div.account
+      - if signed_in?
+        div.listings
+          = link_to("/listings") do
+            h4 All Listings
+          end
+      - else
+        div.account-links
+          = link_to "Sign up with email", sign_up_path
+          br
+          br
+          = link_to "Sign in with email", sign_in_path
+          br
+        div.fb-login
+          = link_to("/auth/facebook") do
+            = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
+            end

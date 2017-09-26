@@ -2,11 +2,14 @@
   div.signin_form
     .text-field
       = form.label :email
+      br
       = form.text_field :email, type: 'email'
+    br
     .password-field
       = form.label :password
+      br
       = form.password_field :password
-    br  
+    br
     .submit-field
       = form.submit
     br
@@ -14,7 +17,7 @@
         = image_tag 'https://rewards.meritushotels.com/img/420GNbXtI43K6/images/facebook-login-blue.png', class: 'fb_login'
       end
 
-  div.links
+  div.session-links
     .other-links
       br
       - if Clearance.configuration.allow_sign_up?

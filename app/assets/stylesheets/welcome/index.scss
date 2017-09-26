@@ -1,22 +1,27 @@
 body {
-  background-color: #efefef;
+  background-color: #white;
   margin: 0;
 }
 
 .hero-header {
   margin: 0 auto;
   text-align: center;
-  padding: 50px;
-  background-color: salmon;
+  padding: 100px;
+  background-image: url('https://static.pexels.com/photos/464336/pexels-photo-464336.jpeg');
+  background-size: cover;
+  height: 100vh;
   color: white;
-  font-size: 2em;
 }
 
-.body-container {
-  height: 100vh;
-  background-image: url('https://unsplash.it/1500/800/?random');
-  background-size: cover;
+.header-title {
+  font-size: 2em;
 }
+//
+// .body-container {
+//   height: 100vh;
+//   background-image: url('https://unsplash.it/1500/800/?random');
+//   background-size: cover;
+// }
 
 .account {
   margin: 0 auto;
@@ -25,8 +30,12 @@ body {
   width: 300px;
   padding: 50px;
   font-size: 1em;
-  background-color: white;
+  background-color: #efefef;
   border-radius: 10px;
+
+  a {
+    color: grey;
+  }
 }
 
 .account-links {

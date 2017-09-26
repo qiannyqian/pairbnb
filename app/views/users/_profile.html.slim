@@ -4,34 +4,42 @@ div.edit_form
     h4 User Account
     .text-field
       = f.label :first_name
+      br
       = f.text_field :first_name
     br
     .text-field
       = f.label :last_name
+      br
       = f.text_field :last_name
     br
     .text-field
       = f.label :email
+      br
       = f.text_field :email, type: 'email'
     / .password-field
     /   = f.label :password
     /   = f.password_field :password
     br
+    br
     h4 Biodata Information
     .text-field
       = f.label :gender
+      br
       = f.text_field :gender
     br
     .text-field
       = f.label :phone
+      br
       = f.text_field :phone
     br
     .text-field
       = f.label :country
+      br
       = f.text_field :country
     br
     .text_field
       = f.label :birthdate
+      br
       = f.date_field :birthdate
     br
     .submit-field
