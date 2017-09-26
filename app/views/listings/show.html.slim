@@ -47,5 +47,8 @@ div.listing-bottom
     - if @user.moderator? || @user.superadmin?
       = button_to 'Verify Listing', verify_path(@listing)
 
+  div.reserve
+    = render partial: '/reservations/create'
+    
 h6
   = link_to 'Back', listings_path

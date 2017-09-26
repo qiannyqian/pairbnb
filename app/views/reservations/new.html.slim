@@ -1,0 +1,15 @@
+/ h1 New Reservation Page
+/
+/ div.create_form
+/   = form_for [current_user, @reservations] do |f|
+/     = f.hidden_field :listing_id, value: @listing.id
+/     = f.hidden_field :user_id, value: current_user.id
+/
+/     = @listing.name
+/     = f.label :start_date
+/     = f.date_field :start_date
+/
+/     = f.label :end_date
+/     = f.date_field :end_date
+/
+/     = f.submit

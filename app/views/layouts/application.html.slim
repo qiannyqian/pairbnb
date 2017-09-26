@@ -11,6 +11,7 @@ html
       = link_to "Home", root_path
       - if signed_in?
         = link_to "Profile", edit_user_path(current_user)
+        = link_to "Reservations", user_reservations_path(current_user)
         = link_to "Listings", user_listings_path(current_user)
         = link_to t(".sign_out"), sign_out_path, method: :delete
       - else

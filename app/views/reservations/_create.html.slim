@@ -1,0 +1,16 @@
+div.create_form
+  = form_for [@user, @reservation] do |f|
+    div.field
+      = f.label :start_date
+      br
+      = f.date_field :start_date
+    div.field
+      = f.label :end_date
+      br
+      = f.date_field :end_date
+    div.field
+      = f.hidden_field :user_id, value: current_user.id
+    div.field
+      = f.hidden_field :listing_id, value: @listing.id
+    div.actions
+      = f.submit
