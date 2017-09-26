@@ -1,7 +1,11 @@
 .listing-title {
   text-align: center;
   font-size: 2em;
-  padding: 30px;
+  color: white;
+  height: 100px;
+  padding: 100px;
+  background-image: url('https://unsplash.it/1500/800/?random');
+  background-size: cover;
 }
 
 .listing-container {
@@ -9,6 +13,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
+  padding: 20px;
 }
 
 .listing-card {
@@ -16,6 +21,7 @@
   padding: 20px;
   width: 250px;
   background-color: white;
+  border-radius: 10px;
 }
 
 .listing-name {
@@ -33,4 +39,5 @@
 
 .pagination {
   text-align: center;
+  justify-content: center;
 }
