@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'braintree/new'
+
   root "welcome#index"
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -22,5 +24,7 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
   post "/listings/:id/delete_photos/:photo_id" => "listings#destroy_image", as: "delete_photos"
+
+  post "braintree/checkout"
 
 end
