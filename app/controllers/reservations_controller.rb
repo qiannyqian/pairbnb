@@ -14,6 +14,8 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
+      ReservationMailer.booking_email(@reservation.user_id).deliver_later
+
       redirect_to user_reservations_path
     else
       render template: "/reservations/new"
